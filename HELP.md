@@ -2,6 +2,7 @@
 
 docker build -t chamadashttp .
 
+docker-compose up
 
 
 ### Reference Documentation
