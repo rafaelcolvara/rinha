@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  webapp1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - SERVER_PORT=8080
+
+  webapp2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - SERVER_PORT=8080
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - webapp1
+      - webapp2
