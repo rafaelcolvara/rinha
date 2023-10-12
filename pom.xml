@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.colvara</groupId>
 	<artifactId>chamadasHttp</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>test</version>
 	<name>chamadasHttp</name>
 	<description>Exemplo de projeto HTTP</description>
 	<properties>
@@ -21,7 +21,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.3.1</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>

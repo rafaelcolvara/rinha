@@ -5,7 +5,7 @@ FROM openjdk:11-jre-slim
 EXPOSE 8080
 
 # The application's jar file (Modify this according to your jar's name or path)
-ARG JAR_FILE=target/chamadasHttp-0.0.1-SNAPSHOT.jar
+ARG JAR_FILE=target/chamadasHttp-test.jar
 
 # Add the application's jar to the container
 ADD ${JAR_FILE} app.jar

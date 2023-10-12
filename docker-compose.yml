@@ -15,6 +15,16 @@ services:
     environment:
       - SERVER_PORT=8080
 
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: rinha
+      POSTGRES_USER: rinhaUser
+      POSTGRES_PASSWORD: rinhaSenha
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
   nginx:
     image: nginx:latest
     ports:
@@ -24,3 +34,8 @@ services:
     depends_on:
       - webapp1
       - webapp2
+
+volumes:
+  pgdata:
+
+
